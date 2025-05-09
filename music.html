@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐作品 - 乐队官网</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">乐队名称</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="music.html" class="active">音乐</a></li>
+                <li><a href="tour.html">巡演</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="music-page">
+            <h2>音乐作品</h2>
+            <div class="music-grid">
+                <div class="music-item">
+                    <div class="album-cover">
+                        <img src="album1.jpg" alt="专辑封面">
+                    </div>
+                    <h3>最新专辑</h3>
+                    <p>2024年发行</p>
+                    <div class="music-player">
+                        <audio controls>
+                            <source src="sample1.mp3" type="audio/mpeg">
+                            您的浏览器不支持音频播放
+                        </audio>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <div class="album-cover">
+                        <img src="album2.jpg" alt="专辑封面">
+                    </div>
+                    <h3>热门单曲</h3>
+                    <p>2023年发行</p>
+                    <div class="music-player">
+                        <audio controls>
+                            <source src="sample2.mp3" type="audio/mpeg">
+                            您的浏览器不支持音频播放
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 乐队名称. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
