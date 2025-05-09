@@ -84,6 +84,24 @@ nav {
     width: 100%;
 }
 
+/* 汉堡菜单按钮 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
 /* 主要内容区域 */
 main {
     margin-top: 80px;
@@ -346,30 +364,91 @@ footer {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
     .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        padding: 1rem 0;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    /* 调整主要内容区域的上边距 */
+    main {
+        margin-top: 60px;
+    }
+
+    /* 调整英雄区域高度 */
+    .hero {
+        height: 60vh;
+        padding: 2rem 1rem;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .hero p {
         font-size: 1.2rem;
     }
-    
+
+    /* 调整音乐网格布局 */
     .music-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-    
+
+    /* 调整巡演项目布局 */
     .tour-item {
         flex-direction: column;
         text-align: center;
+        padding: 1rem;
     }
-    
+
     .tour-date {
-        margin-right: 0;
-        margin-bottom: 1rem;
+        margin: 0 0 1rem 0;
+    }
+
+    /* 调整联系表单 */
+    .contact-form {
+        padding: 0 1rem;
+    }
+
+    /* 调整乐队成员卡片 */
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .member-photo {
+        height: 250px;
+    }
+
+    /* 调整页面内边距 */
+    .about-page,
+    .music-page,
+    .tour-page,
+    .contact-page {
+        padding: 2rem 1rem;
     }
 }
 
